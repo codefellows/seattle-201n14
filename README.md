@@ -4,12 +4,12 @@ Class repo for seattle-201d56 with lead instructor Sam Hamm.
 
 Course schedule:
 
-Nights     | Topic
------------|----------------
-Week 1     | Basic HTML, CSS, & Javascript
-Week 2     | Working with the DOM
-Week 3     | Working with Libraries
-Week 4     | Project Week
+Nights        | Topic
+--------------|----------------
+Week 1 & 2    | Basic HTML, CSS, & Javascript
+Week 3, 4 & 5 | Working with the DOM
+Week 6 & 7    | Working with Libraries
+Week 8        | Project Week
 
 ## Lecture Notes from class
 
