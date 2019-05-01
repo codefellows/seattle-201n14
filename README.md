@@ -1,6 +1,6 @@
 # seattle-201d48
 
-Class repo for seattle-201d56 with lead instructor Sam Hamm.
+Class repo for seattle-201n14 with lead instructor Lena Eivy.
 
 Course schedule:
 
