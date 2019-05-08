@@ -6,7 +6,7 @@
 - Announcements
 	- Keep in mind that the quizzes are open-book, so do use the resources you choose to figure out the answers: books, internet, JS console in your browser, whatever. And remember that the quizzes are preparing you for the 301 entrance exam, which you will take after the last class and right before Project Week.
 - Code Review *[45 minutes]:*
-- [CSS box model + layout](#css) *[45 minutes]:*
+- [CSS layout](#css) *[45 minutes]:*
 - [JS functions](#js) *[45 minutes]:*
 - [Look at the lab assignment, including PAIR PROGRAMMING](#lab) *[45 minutes]:*
 
