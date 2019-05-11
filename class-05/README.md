@@ -2,12 +2,16 @@
 
 <a id="top"></a>
 ## Lecture 5
+### Announcements
+ *Review feedback from week 1 surveys
 
 ## Today's Schedule
-- [Readings and various topics](#readings) *[30 minutes]*
-- [Various topics](#smattering) *[75 minutes]*
+- [Go over student surveys] [15 minutes]
+- [Arrays](#readings) *[30 minutes]*
+- [CSS layout](#smattering) *[45 minutes]*
+- [Images] *[20 minutes]*
 - [Git Branching, including deployment](#git) *[30 minutes]*
-- [Lab Overview](#lab) *[45 minutes]*
+- [Lab Overview](#lab) *[20 minutes]*
 
 **Learning Objectives**
 
