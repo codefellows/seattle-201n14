@@ -15,4 +15,4 @@ Here are a couple of things to keep in mind:
 ### HTML and JS setup
 You are being given starter code for today, in the `index.html` and `app.js` files inside of this directory. The success of your code will be determined by whether it passes tests that are in the `tests.js` file. You do not need to do anything with `tests.js`, though you should take a look at it to see how it works.
 
-Submission instructions are in the Canvas assignment.
+Submit a link to your repo in Canvas
