@@ -1,65 +1,52 @@
-var petListElement = document.getElementById('pet-list');
+'use strict';
+
+var petList = document.getElementById('pet-list');
 
 var cookie = {
-  name: 'cookie',
-  hair: ['brown', 'black'],
-  size: 'medium',
+  name: 'cookie', 
+  color: 'brown',
   isLoud: false,
+  sheds: true,
   render: function(){
-    // create an element
     var liEl = document.createElement('li');
-    
-    // add content
     liEl.textContent = this.name;
-    
-    // append element to the parent
-    petListElement.appendChild(liEl);
+    petList.appendChild(liEl);
   }
 }
-
-// cookie.render();
-
-var tangerine = {
-  name: 'tangerine',
-  hair: ['orange', 'white'],
-  size: 'large',
-  isLoud: true,
-  render: function(){
-    // create an element
-    var liEl = document.createElement('li');
-    
-    // add content
-    liEl.textContent = this.name;
-    
-    // append element to the parent
-    petListElement.appendChild(liEl);
-  }
-}
-
-// tangerine.render();
 
 var malaki = {
   name: 'malaki',
-  hair: ['orange', 'white'],
-  size: 'small',
-  isLoud: false,
+  color: ['orange', 'white'],
+  isLoud: true,
+  sheds: false,
   render: function(){
-    // create an element
     var liEl = document.createElement('li');
-    
-    // add content
     liEl.textContent = this.name;
-    
-    // append element to the parent
-    petListElement.appendChild(liEl);
+    petList.appendChild(liEl);
   }
 }
 
-// malaki.render();
-var allPets = [cookie, tangerine, malaki];
-
-for( var i = 0; i < allPets.length; i++){
-  console.log(allPets[i]);
-  allPets[i].render();
+var tangerine = {
+  name: 'tangerine',
+  color: ['orange', 'white'],
+  isLoud: false,
+  sheds: true
 }
+
+var myPets = [cookie, malaki, tangerine];
+
+for(var i = 0; i < myPets.length; i++){
+  var liEl = document.createElement('li');
+  liEl.textContent = myPets[i].name;
+  petList.appendChild(liEl);
+}
+
+// create an element - li
+// add text (the animal names) to the element (li)
+// append the element (li) to the parent (ul)
+
+
+
+
+
 
