@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Forms Demo</title>
+</head>
+<body>
+  <!-- build a form that makes a person -->
+  <form id="myForm">
+    <fieldset>
+      <label>name:</label>
+      <input name="username" type="text" />
+
+      <br />
+
+      <label>what's your story?</label>
+      <textarea name="story" type="text"></textarea>
+
+      <br />
+
+      <label>How do you spend your free time?</label>
+      <div id="freeTime">
+        <input type="checkbox" name="free1" value="Movies">Movies</input>
+        <input type="checkbox" name="free2" value="Hiking">Hiking</input>
+        <input type="checkbox" name="free3" value="Friends">Friends</input>
+      </div>
+
+      <br />
+
+      <label>Are you a cat or a dog person?</label>
+      <select name="animal">
+        <option value="cat">Cat</option>
+        <option value="dog">Dog</option>
+        <option value="aligator">Aligator</option>
+      </select>
+
+      <br />
+
+      <input type="submit" name="submitButton" value="submit" />
+      <!-- <button name="submitButton">submit</button> -->
+
+    </fieldset>
+  </form>
+  
+  <script src="app.js"></script>
+</body>
+</html>
