@@ -1,0 +1,67 @@
+body{
+  width: 960px;
+  margin: auto;
+}
+#top-header{
+  background-color: lightgray;
+  text-align: right;
+  height: 20px;
+  width: 100%;
+}
+
+#top-header span{
+  padding: 10px;
+}
+
+#bottom-header img{
+  margin: 10px 0 10px 20px;
+  float: left;
+}
+
+#button-holder{
+  text-align: right;
+}
+
+#button-holder button{
+  margin: 5px;
+  padding: 10px 55px;
+}
+
+nav ul li{
+  display: inline-block;
+  margin-right: 10px;
+  float: right;
+  margin-top: 50px;
+}
+
+#hero-section{
+  margin-bottom: 10px;
+}
+
+#announcements{
+  width: 100%;
+  background-color: lightgray;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+#x{
+  float: right;
+  margin-right: 10px;
+  border: 1px solid gray;
+  margin-top: 19px;
+}
+
+#words {
+  margin-left: 10px;
+  line-height: 60px;
+}
+
+#gallery img{
+  float: left;
+  margin-right: 10px;
+}
+
+#gallery #last-image{
+  margin-right: 0;
+}
