@@ -33,14 +33,15 @@ function handleClick(e){
 var contactFormEl = document.getElementById('contact-form');
 contactFormEl.addEventListener('submit', handleFormSubmit);
 
-function handleFormSubmit(e){
-  e.preventDefault();
+function handleFormSubmit(event){
+  event.preventDefault();
   if(event.target){
     console.log('the event.target is ', event.target);
     console.log('the event.target.username is ', event.target.username);
     console.log('the event.target.username.value is ', event.target.username.value);
     console.log('the event.target.pets is ', event.target.pets);
     console.log('the event.target.pets.value is', event.target.pets.value);
+    var username = event.target.username.value;
   }
 }
 

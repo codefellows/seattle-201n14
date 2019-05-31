@@ -1,0 +1,53 @@
+h1{
+  text-align: center;
+  font-family: sans-serif;
+  margin-bottom: 1em;
+}
+
+form{
+  padding: 2em;
+  margin: 2em;
+  text-align: center;
+  background-color: lightgray;
+}
+
+form input{
+  display: block;
+  padding: 1em;
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 1em;
+}
+
+form #submit{
+  line-height: 2em;
+  background-color: lightblue;
+  width: 30%;
+  border-radius: 10px;
+}
+
+table {
+  width: 90%;
+  margin: auto;
+  padding: 1em;
+  text-align: center;
+}
+
+table tr:hover {
+  background-color: gray;
+  color: white;
+}
+
+tr:first-child{
+  text-align: left;
+}
+
+tr{
+  text-align: left;
+}
+
+td{
+  padding: 1em;
+  border-bottom: 2px solid black;
+}
