@@ -43,19 +43,13 @@ CookieStand.prototype.render = function() {
   var trEl = document.createElement('tr');
   tableEl.appendChild(trEl);
 
-  var tdEl = document.createElement('td');
-  tdEl.textContent = this.locationName;
-  trEl.appendChild(tdEl);
+  var tdEl = CookieStand.addElement('td', this.locationName, trEl);
   
   for (var i = 0; i < hours.length; i++) {
-    tdEl = document.createElement('td');
-    tdEl.textContent = this.cookiesEachHour[i];
-    trEl.appendChild(tdEl);
+    CookieStand.addElement('td', this.cookiesEachHour[i], trEl);
   }
 
-  tdEl = document.createElement('td');
-  tdEl.textContent = this.totalDailyCookies;
-  trEl.appendChild(tdEl);
+  CookieStand.addElement('td', this.totalDailyCookies, trEl);
 }
 
 var pike = new CookieStand('Pike Place Market', 23, 65, 6.3, 'pike');
@@ -68,68 +62,41 @@ new CookieStand('Alki', 2, 16, 4.6, 'alki');
 function handleForm(e){
   e.preventDefault();
 
-  var loc = e.target.locName.value;
+  var loc = e.target.storeName.value;
   var min = parseInt(e.target.min.value);
   var max = parseInt(e.target.max.value);
   var avg = parseFloat(e.target.avg.value);
-
-  for (var i = 0; i < allStores.length; i++){
-    if(loc === allStores[i].locationName) {
-      // reassigning the starter properties
-      allStores[i].minCustomersPerHour = min;
-      allStores[i].maxCustomersPerHour = max;
-      allStores[i].avgCookiesPerSale = avg;
-
-      // zeroing out the results of our calculations
-      allStores[i].customersEachHour = [];
-      allStores[i].totalDailyCookies = 0;
-      allStores[i].cookiesEachHour = [];
-
-      // doing the calculations
-      allStores[i].calcCookiesEachHour();
-      clearForm();
-      renderTable();
-      return;
-    }
-  }
-
+  
   new CookieStand(loc, min, max, avg);
 
   function clearForm() {
-    e.target.locName.value = null;
+    e.target.storeName.value = null;
     e.target.min.value = null;
     e.target.max.value = null;
     e.target.avg.value = null;
-    CookieStand.renderTable();
   }
+
+  clearForm()
+  renderTable();
 }
 
-function makeHeaderRow() {
-  var trEl = document.createElement('tr');
 
-  var thEl = document.createElement('th');
-  thEl.textContent = 'Locations';
-  trEl.appendChild(thEl);
+function makeHeaderRow() {
+  var trEl = CookieStand.addElement('tr', null, tableEl);
+
+  var thEl = CookieStand.addElement('th', 'Locations', trEl);
 
   for (var i = 0; i < hours.length; i++) {
-    var thEl = document.createElement('th');
-    thEl.textContent = hours[i];
-    trEl.appendChild(thEl);
+    CookieStand.addElement('th', hours[i], trEl);
   }
   
-  var thEl = document.createElement('th');
-  thEl.textContent = 'Location Totals';
-  trEl.appendChild(thEl);
-
-  tableEl.appendChild(trEl);
+  var thEl = CookieStand.addElement('th', 'Location Totals', trEl);
 }
 
 function makeFooterRow() {
-  var trEl = document.createElement('tr');
-  
-  var tdEl = document.createElement('td');
-  tdEl.textContent = 'Hourly Totals for All Locations';
-  trEl.appendChild(tdEl);
+  var trEl = CookieStand.addElement('tr', null, tableEl);
+
+  var tdEl = CookieStand.addElement('td', 'Hourly Totals for All Locations', trEl);
 
   var totalOfTotals = 0;
   var hourlyTotal = 0;
@@ -141,16 +108,11 @@ function makeFooterRow() {
       totalOfTotals += allStores[j].cookiesEachHour[i];
     }
 
-    var tdEl = document.createElement('td');
-    tdEl.textContent = hourlyTotal;
-    trEl.appendChild(tdEl);
+    var tdEl = CookieStand.addElement('td', hourlyTotal, trEl);
   }
 
-  var tdEl = document.createElement('td');
-  tdEl.textContent = totalOfTotals;
-  trEl.appendChild(tdEl);
+  var tdEl = CookieStand.addElement('td', totalOfTotals, trEl);
 
-  tableEl.appendChild(trEl);
 }
 
 function renderTable() {
@@ -164,6 +126,18 @@ function renderTable() {
 
   makeFooterRow();
 }
+
+CookieStand.addElement = function(element, content, parent){
+  var newElement = document.createElement(element); 
+
+  if(content){
+    newElement.textContent = content;
+  }
+
+  parent.appendChild(newElement);
+  return newElement;
+}
+
 
 formEl.addEventListener('submit', handleForm);
 

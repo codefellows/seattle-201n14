@@ -1,0 +1,33 @@
+body {
+  background-color: lightgray;
+}
+
+button {
+  padding: 2em;
+  background-color: lightblue;
+}
+
+button:hover {
+  background-color: darkblue;
+  color: white;
+}
+
+#yes {
+  background-color: lightsalmon;
+  color: white;
+}
+
+#no {
+  background-color: gray;
+  color: white;
+}
+
+#yes:hover {
+  background-color: lightpink;
+}
+
+img {
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+}
