@@ -116,7 +116,7 @@ function renderChart(){
 
   var ctx = canvasEl.getContext('2d');
   
-  var myChart = new Chart(ctx, {
+    new Chart(ctx, {
       type: 'line',
       data: {
           labels: namesArray, // names of each object
