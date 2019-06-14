@@ -1,0 +1,49 @@
+body {
+  background: gray;
+}
+
+header {
+  border-bottom: 2px double black;
+  padding-bottom: 1em;
+}
+
+nav ul {
+  width: 41%;
+  margin: auto;
+}
+
+nav li {
+  border: 2px solid black;
+  background-color: white;
+  padding: 1em;
+  margin-left: 2em;
+  display: inline-block;
+}
+
+nav li a{
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 1em 2em 0 2em;
+  padding-bottom: 10px;
+  font-size: 3em;
+}
+
+/* buttons */
+
+
+/* Card 1 Styles */
+
+
+/* Card 2 Styles */
+
+
+/* Deck one colum */
+
+
+/* Deck three columns */
