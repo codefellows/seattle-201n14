@@ -36,12 +36,78 @@ h1 {
 
 /* buttons */
 
+#do-not-press{
+  width: 200px;
+  height: 100px;
+  background-color: #eee;
+  margin-right: 1em;
+  font-size: 1.2em;
+  border-radius: 20px;
+  box-shadow: 5px 5px;
+  margin-top: 1em;
+}
+
+#do-not-press:hover{
+  background-color: hotpink;
+}
+
+#press{
+  width: 200px;
+  height: 100px;
+  background-color: #eee;
+  margin-right: 1em;
+  font-size: 1.2em;
+  border-radius: 20px;
+  box-shadow: 5px 5px;
+  margin-top: 1em;
+}
+
+#press:hover{
+  background-color: cornsilk;
+}
 
 /* Card 1 Styles */
+#row-1{
+  width: 960px;
+  margin: auto;
+}
 
+#row-1 #card-1 h2{
+  text-align: center;
+  font-size: 2em;
+  font-family: sans-serif;
+  padding: 1em;
+  margin: 1em;
+}
+
+#row-1 #card-1 p{
+  text-align: justify;
+  margin-top: 1em;
+  width: 900px;
+  color: beige;
+  font-family: sans-serif;
+}
 
 /* Card 2 Styles */
+#row-2{
+  margin: 2em auto;
+}
+.card-2 img{
+  float: left;
+  margin-right: 1em;
+}
 
+.card-2{
+  width: 40%;
+  float: left;
+}
+
+.card-2 h3{
+  margin-top: 1em;
+  font-size: 2em;
+  margin-bottom: 1em;
+  font-family: sans-serif;
+}
 
 /* Deck one colum */
 
