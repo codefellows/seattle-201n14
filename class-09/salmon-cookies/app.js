@@ -2,9 +2,7 @@
 
 // hours array
 var hours = ['6am', '7am', '8am', '9am'];
-// a var to hold the table
-var tableEl = document.getElementById('table');
-var formEl = document.getElementById('form');
+
 // an array to hold the store objects
 var allStores = [];
 
@@ -45,54 +43,32 @@ Stores.prototype.calcCookiesPerHour = function(){
 
 Stores.prototype.render = function(){
   this.calcCookiesPerHour();
-  var trEl = document.createElement('tr');
-
-  var tdEl = document.createElement('td');
-  tdEl.textContent = this.locationName;
-  trEl.appendChild(tdEl);
-
+  
+  $('#table').append('<tr>');
+  $('tr:last-child').append(`<td>${this.name}</td>`);
+  
   for(var i = 0; i < hours.length; i++){
-    tdEl = document.createElement('td');
-    tdEl.textContent = this.cookiesPerHour[i];
-    trEl.appendChild(tdEl);
+    console.log('in the render function', i, this.cookiesPerHour[i]);
+    $('tr:last-child').append(`<td>${this.cookiesPerHour[i]}</td>`);
   }
-
-  var thEl = document.createElement('th');
-  thEl.textContent = this.dailyTotal;
-  trEl.appendChild(thEl);
-
-  tableEl.appendChild(trEl);
+  
+  $('tr:last-child').append(`<th>${this.dailyTotal}</th>`);
 }
 
 var pike = new Stores('Pike', 1, 10, 100);
-pike.calcCookiesPerHour();
+new Stores('Bob', 4, 10, 4);
 
-// helper functions
-  // render table data
-  // render footer
-    // nested for loop
 function random(min, max){
   return Math.ceil(Math.random() * (max - min +1) + min);
 }
 
 function renderHeader(){
-  var trEl = document.createElement('tr');
-  tableEl.appendChild(trEl);
+  $('#table').append('<tr>');
 
-  // store name cell
-  var thEl = document.createElement('th');
-  thEl.textContent = 'Locations';
-  trEl.appendChild(thEl);
+  $('tr').append(`<th>Locations</th>`);
 
   for(var i = 0; i < hours.length; i++){
-    // create an element
-    var thEl = document.createElement('th');
-    // add content
-    var text = document.createTextNode(`${hours[i]}`);
-    // attach to parent
-    thEl.appendChild(text);
-    trEl.appendChild(thEl);
-
+    $('tr').append(`<th>${hours[i]}</th>`);
   }
 }
 
@@ -103,21 +79,17 @@ function renderAllStores(){
 }
 
 function renderFooter(){
-  var trEl = document.createElement('tr');
-  tableEl.appendChild(trEl);
-  
-  var tdEl = document.createElement('td');
-  tdEl.textContent = "Hourly Sales";
-  trEl.appendChild(tdEl);
+  $('#table').append('<tr>');
+
+  $('tr:last-child').append(`<td>Hourly Sales</td>`);
 
   for(var i = 0; i < hours.length; i++){
     var hourlyTotal = 0;
     for(var j = 0; j < allStores.length; j++){
       hourlyTotal = hourlyTotal + allStores[j].cookiesPerHour[i];
     }
-    tdEl = document.createElement('td');
-    tdEl.textContent = hourlyTotal;
-    trEl.appendChild(tdEl);
+
+    $('tr:last-child').append(`<td>${hourlyTotal}</td>`);
   }
 
 }
@@ -132,7 +104,7 @@ function handleSubmit(event){
 
   new Stores(name, min, max, average);
 
-  tableEl.innerHTML = '';
+  $('#table').html('');
 
   renderHeader();
   renderAllStores();
@@ -141,7 +113,7 @@ function handleSubmit(event){
 }
 
 // event listener
-formEl.addEventListener('submit', handleSubmit);
+$('#form').bind('submit', handleSubmit);
 
 
 // render the table

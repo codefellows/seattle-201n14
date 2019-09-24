@@ -5,6 +5,7 @@
 
 ## Today's Schedule
 - Announcements
+- https://curiousyang.github.io/slidingpuzzle/
 - Code Review *[60 minutes]*
 - [Go over the assigned readings](#readings) *[60 minutes]*
 - Code demo *[90 minutes]*

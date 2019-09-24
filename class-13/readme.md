@@ -5,10 +5,6 @@
 
 - Code Review
 
-- Go over the announcements listed below.
-
-`10 minute break`
-
 - **[Discussion on Final Projects](#Projects)**
 
 - **[Persistence and Local Storage](#ls)**

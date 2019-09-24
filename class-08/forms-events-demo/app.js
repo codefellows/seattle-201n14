@@ -13,35 +13,35 @@ function handleBoxClick(event){
 
 // simple form event listener
 
-var formEl = document.getElementById('form');
-formEl.addEventListener('submit', handleClick);
+// var formEl = document.getElementById('form');
+// formEl.addEventListener('submit', handleClick);
 
-function handleClick(e){
-  // MUST do this if your event is submit
-  e.preventDefault();
+// function handleClick(e){
+//   // MUST do this if your event is submit
+//   e.preventDefault();
   
-  if(event.target.username){
-    console.log('the event.target is ', event.target);
-    console.log('the event.target.username is ', event.target.username);
-    console.log('the event.target.textContent is ', event.target.textContent);
-    console.log('the event.target.username.value is ', event.target.username.value);
-  }
-}
+//   if(event.target.username){
+//     console.log('the event.target is ', event.target);
+//     console.log('the event.target.username is ', event.target.username);
+//     console.log('the event.target.textContent is ', event.target.textContent);
+//     console.log('the event.target.username.value is ', event.target.username.value);
+//   }
+// }
 
 // contact form event listener
 
-var contactFormEl = document.getElementById('contact-form');
-contactFormEl.addEventListener('submit', handleFormSubmit);
+// var contactFormEl = document.getElementById('contact-form');
+// contactFormEl.addEventListener('submit', handleFormSubmit);
 
-function handleFormSubmit(event){
-  event.preventDefault();
-  if(event.target){
-    console.log('the event.target is ', event.target);
-    console.log('the event.target.username is ', event.target.username);
-    console.log('the event.target.username.value is ', event.target.username.value);
-    console.log('the event.target.pets is ', event.target.pets);
-    console.log('the event.target.pets.value is', event.target.pets.value);
-    var username = event.target.username.value;
-  }
-}
+// function handleFormSubmit(event){
+//   event.preventDefault();
+//   if(event.target){
+//     console.log('the event.target is ', event.target);
+//     console.log('the event.target.username is ', event.target.username);
+//     console.log('the event.target.username.value is ', event.target.username.value);
+//     console.log('the event.target.pets is ', event.target.pets);
+//     console.log('the event.target.pets.value is', event.target.pets.value);
+//     var username = event.target.username.value;
+//   }
+// }
 
